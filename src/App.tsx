@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.scss";
+import Calculator from "./components/Calculator";
+import Results from "./components/Results";
+import Info from "./components/Info";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-function App() {
+
+const App = () => {
+  const [result,setResult]=useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact>
+            <Calculator result={result} setResult={setResult}/>
+          </Route>
+          <Route path="/result">
+            <Results result={result} />
+          </Route>
+          <Route path="/info">
+            <Info />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
+// if ("serviceWorker" in navigator) {
+//   window.addEventListener("load", () => {
+//     navigator.serviceWorker.register("serviceWorker.tsx");
+//   });
+// }
 export default App;

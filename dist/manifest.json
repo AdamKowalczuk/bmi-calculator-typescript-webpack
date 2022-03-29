@@ -1,0 +1,5 @@
+{
+  "main.js": "auto/bundle.js",
+  "assets/favicon.ico": "auto/assets/favicon.ico",
+  "index.html": "auto/index.html"
+}

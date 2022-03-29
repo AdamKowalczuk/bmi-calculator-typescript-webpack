@@ -1,0 +1,58 @@
+$pink: #ee849a;
+$gray: #5a6074;
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 20px 0;
+  b {
+    // color: $pink;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
+.MuiPaper-root {
+  width: 80%;
+}
+.MuiPaper-elevation {
+  margin: 10px;
+}
+.MuiAccordionSummary-root {
+  background: #e4ebf5 !important;
+  box-shadow: 3px 3px 5px #c8d0e7, -3px -3px 5px #ffffff !important;
+  //   padding: 10px !important;
+
+  img {
+    width: 30px;
+    padding: 10px;
+    background-color: rgb(91, 98, 119, 20%);
+    border-radius: 10px;
+  }
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
+.MuiAccordionDetails-root {
+  background-color: #e4ebf5 !important;
+  padding: 10px !important;
+}
+.MuiAccordion-root {
+  box-shadow: 3px 3px 5px #c8d0e7, -3px -3px 5px #ffffff !important;
+}
+.MuiAccordionSummary-expandIconWrapper {
+  position: absolute;
+  right: 20px;
+}
+.css-uvvswg-MuiButtonBase-root-MuiAccordionSummary-root .MuiAccordionSummary-content {
+  margin-left: -5px;
+}
