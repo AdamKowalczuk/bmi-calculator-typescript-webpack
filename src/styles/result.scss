@@ -1,0 +1,50 @@
+$pink: #ee849a;
+$gray: #5a6074;
+$blue: #58cbe0;
+.results-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 10%;
+  height: calc(100vh - 100px);
+  rect {
+    padding: 10px;
+    filter: drop-shadow(3px 3px 5px #c8d0e7) drop-shadow(-3px -3px 5px #ffffff);
+  }
+  .circle {
+    width: 200px;
+    height: 200px;
+    margin: 30px 0;
+    .CircularProgressbar-background {
+      fill: #e4ebf5;
+    }
+    .CircularProgressbar-path {
+      stroke: $blue;
+    }
+    .CircularProgressbar-text {
+      fill: $gray;
+    }
+  }
+  .text {
+    text-align: center;
+    b {
+      color: $blue;
+    }
+    h3 {
+      font-weight: 500;
+    }
+    h4 {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    p {
+    }
+  }
+}
+
+.result-footer {
+  position: absolute;
+  bottom: 0px;
+}

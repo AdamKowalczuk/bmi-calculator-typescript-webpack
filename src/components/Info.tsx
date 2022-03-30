@@ -64,7 +64,7 @@ const Info = () => {
             <h3>BMI formula</h3>
           </AccordionSummary>
           <AccordionDetails>
-            <code>weight (kg) / [height (m)]^2</code>
+            <p>weight (kg) / [height (m)]^2</p>
           </AccordionDetails>
         </Accordion>
         <Accordion expanded={expanded === "panel3"} onChange={handleChange("panel3")}>
@@ -76,24 +76,24 @@ const Info = () => {
             <Typography>
               <p>
                 <b>Underweight: Less than 18.5</b>
-                <p>Underweight could be a sign you're not eating enough or you may be ill. If you're underweight, a GP can help.</p>
-
+                <br />
+                Underweight could be a sign you're not eating enough or you may be ill. If you're underweight, a GP can help.
               </p>
               <p>
                 <b>Normal: 18.5 to 24.9</b>
-                <p>Keep up the good work! For tips on maintaining a healthy weight.</p>
-
+                <br />
+                Keep up the good work! For tips on maintaining a healthy weight.
               </p>
               <p>
                 <b>Overweight: 25 to 29.9</b>
-                <p>The best way to lose weight if you're overweight is through a combination of diet and exercise.</p>
-
+                <br />
+                The best way to lose weight if you're overweight is through a combination of diet and exercise.
               </p>
               <p>
                 <b>Obese: 30 and above</b>
-                <p>The best way to lose weight if you're obese is through a combination of diet and exercise, and, in some
-                cases, medicines. See a GP for help and advice.</p>
-
+                <br />
+                The best way to lose weight if you're obese is through a combination of diet and exercise, and, in some
+                cases, medicines. See a GP for help and advice.
               </p>
             </Typography>
           </AccordionDetails>

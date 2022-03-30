@@ -22,7 +22,7 @@ const Calculator = (props:any) => {
   const theme = createTheme({
     palette: {
       primary: {
-        main: "#ee849a",
+        main: "#58cbe0",
       },
     },
   });
@@ -67,7 +67,7 @@ return ((weight)/(Math.pow(height/100,2))).toFixed(2)
             <p style={{ display: "inline-block" }}>cm</p>
           </h2>
           <ThemeProvider theme={theme}>
-            <Slider defaultValue={160} aria-label="Small" onChange={(e)=>handleSliderChange(e)} min={80} max={250} valueLabelDisplay="off" color="primary" />
+            <Slider defaultValue={160} aria-label="Small" onChange={(e)=>handleSliderChange(e)} min={80} max={240} valueLabelDisplay="off" color="primary" />
           </ThemeProvider>
         </div>
         <div className="calculator-row3-column1 convex">

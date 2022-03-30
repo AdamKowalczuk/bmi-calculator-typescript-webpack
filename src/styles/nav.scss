@@ -1,4 +1,6 @@
 $pink: #ee849a;
+$blue: #58cbe0;
+$gray: #5a6074;
 nav {
   height: 50px;
   width: 100vw;
@@ -7,6 +9,7 @@ nav {
   align-items: center;
   h1 {
     margin: 0;
+    font-weight: 400;
   }
   .question {
     width: 30px;
