@@ -27,3 +27,17 @@ nav {
     left: 10px;
   }
 }
+
+@media only screen and (min-width: 1000px) {
+  nav {
+    width: 40vw;
+    margin: 0 30%;
+    .question {
+      right: 30%;
+    }
+    .angle {
+      top: 10px;
+      left: 30%;
+    }
+  }
+}

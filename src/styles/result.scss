@@ -48,3 +48,50 @@ $blue: #58cbe0;
   position: absolute;
   bottom: 0px;
 }
+
+@media only screen and (min-width: 1000px) {
+  .results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 0 30%;
+    height: 80vh;
+    .circle {
+      width: 200px;
+      height: 200px;
+      margin: 30px 0;
+      .CircularProgressbar-background {
+        fill: #e4ebf5;
+      }
+      .CircularProgressbar-path {
+        stroke: $blue;
+      }
+      .CircularProgressbar-text {
+        fill: $gray;
+      }
+    }
+    .text {
+      text-align: center;
+      width: 50%;
+      b {
+        color: $blue;
+      }
+      h3 {
+        font-weight: 500;
+      }
+      h4 {
+        font-weight: 400;
+        font-size: 16px;
+      }
+      p {
+      }
+    }
+  }
+
+  .result-footer {
+    position: absolute;
+    bottom: 0px;
+  }
+}
