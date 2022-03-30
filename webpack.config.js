@@ -4,14 +4,8 @@ const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 module.exports = {
-  //   debug: true,
   mode: "development",
   devtool: "inline-source-map",
-  //   errorDetails: true,
-  //   entry: path.resolve(__dirname, "./src/index.tsx"),
-  //   entry: {
-  //     app: path.join(__dirname, "src", "index.tsx"),
-  //   },
   entry: "./src/index.tsx",
   target: "web",
   output: {
@@ -26,9 +20,6 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: "ts-loader",
-        // options: { allowTsInNodeModules: true },
-
-        // exclude: "/node_modules/",
       },
       {
         test: /\.css$/i,
@@ -36,14 +27,7 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
-        ],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.svg$/,
