@@ -3,7 +3,7 @@ import Graduation from "../icons/Graduation.svg";
 import Lock from "../icons/Lock.svg";
 import Share from "../icons/Share.svg";
 import "../styles/info.scss";
-import Nav2 from './Nav2'
+import Nav2 from "./Nav2";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
 import { styled } from "@mui/material/styles";
@@ -41,11 +41,8 @@ const Info = () => {
   };
   return (
     <>
-      <Nav2 text="Info"/>
+      <Nav2 text="Info" />
       <div className="info-container">
-        {/* <div className="icon">
-        <img src={Graduation} alt=" graduation" />
-      </div> */}
         <Accordion expanded={expanded === "panel1"} onChange={handleChange("panel1")}>
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
             <img src={Graduation} alt="graduation" />
@@ -60,7 +57,7 @@ const Info = () => {
         </Accordion>
         <Accordion expanded={expanded === "panel2"} onChange={handleChange("panel2")}>
           <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <img src={Lock} alt="lock" />
+            <img src={Lock} alt="lock" />
             <h3>BMI formula</h3>
           </AccordionSummary>
           <AccordionDetails>
@@ -69,7 +66,7 @@ const Info = () => {
         </Accordion>
         <Accordion expanded={expanded === "panel3"} onChange={handleChange("panel3")}>
           <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <img src={Share} alt="share" />
+            <img src={Share} alt="share" />
             <h3>BMI weight categories</h3>
           </AccordionSummary>
           <AccordionDetails>
@@ -92,8 +89,8 @@ const Info = () => {
               <p>
                 <b>Obese: 30 and above</b>
                 <br />
-                The best way to lose weight if you're obese is through a combination of diet and exercise, and, in some
-                cases, medicines. See a GP for help and advice.
+                The best way to lose weight if you're obese is through a combination of diet and exercise, and, in some cases, medicines. See a GP for
+                help and advice.
               </p>
             </Typography>
           </AccordionDetails>

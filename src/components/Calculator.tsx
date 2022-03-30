@@ -10,7 +10,7 @@ import Slider from "@mui/material/Slider";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useHistory } from "react-router-dom";
 import Nav from "./Nav";
-const Calculator = (props:any) => {
+const Calculator = (props: any) => {
   let history = useHistory();
   const [height, setHeight] = useState(160);
   const handleSliderChange = (e: any) => {
@@ -26,33 +26,32 @@ const Calculator = (props:any) => {
       },
     },
   });
-  function calculateBmi(){
-return ((weight)/(Math.pow(height/100,2))).toFixed(2)
-
+  function calculateBmi() {
+    return (weight / Math.pow(height / 100, 2)).toFixed(2);
   }
   return (
     <>
-    <Nav text="BMI Calculator" />
+      <Nav text="BMI Calculator" />
       <div className="calculator-container">
-        <div className="calculator-row1-column1 convex center" onClick={()=>setSex('male')}>
-        {sex === "male" ? (
+        <div className="calculator-row1-column1 convex center" onClick={() => setSex("male")}>
+          {sex === "male" ? (
             <>
-            <img src={MaleColored} alt="male" />
-            <h2 className="pink">Male</h2>
-          </>
+              <img src={MaleColored} alt="male" />
+              <h2 className="pink">Male</h2>
+            </>
           ) : (
             <>
-               <img src={Male} alt="male" />
-            <h2>Male</h2>
+              <img src={Male} alt="male" />
+              <h2>Male</h2>
             </>
           )}
         </div>
-        <div className="calculator-row1-column2 convex center" onClick={()=>setSex('female')}>
+        <div className="calculator-row1-column2 convex center" onClick={() => setSex("female")}>
           {sex === "male" ? (
             <>
-            <img src={Female} alt="female" />
-            <h2>Female</h2>
-          </>
+              <img src={Female} alt="female" />
+              <h2>Female</h2>
+            </>
           ) : (
             <>
               <img src={FemaleColored} alt="female" />
@@ -67,7 +66,15 @@ return ((weight)/(Math.pow(height/100,2))).toFixed(2)
             <p style={{ display: "inline-block" }}>cm</p>
           </h2>
           <ThemeProvider theme={theme}>
-            <Slider defaultValue={160} aria-label="Small" onChange={(e)=>handleSliderChange(e)} min={80} max={240} valueLabelDisplay="off" color="primary" />
+            <Slider
+              defaultValue={160}
+              aria-label="Small"
+              onChange={(e) => handleSliderChange(e)}
+              min={80}
+              max={240}
+              valueLabelDisplay="off"
+              color="primary"
+            />
           </ThemeProvider>
         </div>
         <div className="calculator-row3-column1 convex">
@@ -101,7 +108,14 @@ return ((weight)/(Math.pow(height/100,2))).toFixed(2)
         </div>
       </div>
       <footer className="center">
-        <button onClick={()=>{props.setResult(calculateBmi());history.push('/result')}}>CALCULATE</button>
+        <button
+          onClick={() => {
+            props.setResult(calculateBmi());
+            history.push("/result");
+          }}
+        >
+          CALCULATE
+        </button>
       </footer>
     </>
   );

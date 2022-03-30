@@ -2,8 +2,8 @@ import React from "react";
 import Nav from "./Nav";
 import { useHistory } from "react-router-dom";
 import "../styles/result.scss";
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 const Results = (props: any) => {
   let history = useHistory();
   function returnBodyWeightName(bmi: number) {
@@ -37,16 +37,25 @@ const Results = (props: any) => {
     <>
       <Nav text="BMI Results" />
       <div className="results-container">
-
-<rect><CircularProgressbar background
-        backgroundPadding={6} className="circle" value={props.result} minValue={10} maxValue={50} text={props.result} strokeWidth={12}/></rect>
-
+        <rect>
+          <CircularProgressbar
+            background
+            backgroundPadding={6}
+            className="circle"
+            value={props.result}
+            minValue={10}
+            maxValue={50}
+            text={props.result}
+            strokeWidth={12}
+          />
+        </rect>
 
         <div className="text">
-        <h3>You have <b>{returnBodyWeightName(props.result)}</b> body weight!</h3>
-        <h4>{returnWeightDescription(props.result)}</h4>
+          <h3>
+            You have <b>{returnBodyWeightName(props.result)}</b> body weight!
+          </h3>
+          <h4>{returnWeightDescription(props.result)}</h4>
         </div>
-
       </div>
 
       <footer className="center result-footer">

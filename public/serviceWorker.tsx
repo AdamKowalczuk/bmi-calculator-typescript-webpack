@@ -3,12 +3,9 @@ export type {};
 declare const self: ServiceWorkerGlobalScope;
 const staticCacheName = "site-static-v1";
 const dynamicCacheName = "site-dynamic-v1";
-const assets = [
-  "/index.html"
-];
-// var self: Window & typeof globalThis;
+const assets = ["/index.html"];
 // install service worker
-self.addEventListener("install", (e:any) => {
+self.addEventListener("install", (e: any) => {
   e.waitUntil(
     caches.open(staticCacheName).then((cache) => {
       console.log("chaching shell assets");
@@ -17,21 +14,16 @@ self.addEventListener("install", (e:any) => {
   );
 });
 
-
 // activate event
-self.addEventListener("activate", (e:any) => {
+self.addEventListener("activate", (e: any) => {
   e.waitUntil(
     caches.keys().then((keys) => {
       console.log("activate event");
-      return Promise.all(
-        keys
-          .filter((key) => key !== staticCacheName && key !== dynamicCacheName)
-          .map((key) => caches.delete(key))
-      );
+      return Promise.all(keys.filter((key) => key !== staticCacheName && key !== dynamicCacheName).map((key) => caches.delete(key)));
     })
   );
 });
-self.addEventListener("fetch", (e:any) => {
+self.addEventListener("fetch", (e: any) => {
   e.respondWith(
     caches
       .match(e.request)
@@ -48,9 +40,7 @@ self.addEventListener("fetch", (e:any) => {
         );
       })
       .catch(() => {
-        console.log(
-          "No internet connection found. App is running in offline mode."
-        );
+        console.log("No internet connection found. App is running in offline mode.");
       })
   );
 });
