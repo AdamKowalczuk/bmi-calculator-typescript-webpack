@@ -47,7 +47,7 @@ module.exports = {
     }),
     new WebpackManifestPlugin({
       fileName: "manifest.json",
-      publicPath: "/public",
+      publicPath: "/",
     }),
     new FaviconsWebpackPlugin("./public/favicon.ico"),
   ],
