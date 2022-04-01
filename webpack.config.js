@@ -2,7 +2,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-
 module.exports = {
   mode: "development",
   devtool: "inline-source-map",
