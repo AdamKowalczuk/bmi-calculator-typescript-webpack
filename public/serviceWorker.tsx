@@ -1,12 +1,11 @@
-// /// <reference lib="WebWorker" />
-// export type {};
-// declare const self: ServiceWorkerGlobalScope;
-// var self;
+/// <reference lib="WebWorker" />
+export type {};
+declare const self: ServiceWorkerGlobalScope;
 const staticCacheName = "site-static-v1";
 const dynamicCacheName = "site-dynamic-v1";
 const assets = ["/index.html"];
 // install service worker
-self.addEventListener("install", (e) => {
+self.addEventListener("install", (e: any) => {
   e.waitUntil(
     caches.open(staticCacheName).then((cache) => {
       console.log("chaching shell assets");
@@ -16,7 +15,7 @@ self.addEventListener("install", (e) => {
 });
 
 // activate event
-self.addEventListener("activate", (e) => {
+self.addEventListener("activate", (e: any) => {
   e.waitUntil(
     caches.keys().then((keys) => {
       console.log("activate event");
@@ -24,7 +23,8 @@ self.addEventListener("activate", (e) => {
     })
   );
 });
-self.addEventListener("fetch", (e) => {
+
+self.addEventListener("fetch", (e: any) => {
   e.respondWith(
     caches
       .match(e.request)
