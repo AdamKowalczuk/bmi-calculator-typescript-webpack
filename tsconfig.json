@@ -24,8 +24,9 @@
     "isolatedModules": true,
 
   },
-  "include": [
-    "src", "public/serviceWorker.tsx"
-  ],
+  // "include": [
+  //   "src", "public/serviceWorker.ts"
+  // ],
+
 
 }

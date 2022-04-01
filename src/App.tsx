@@ -1,7 +1,6 @@
 import React, { useState, Suspense, lazy } from "react";
 import "./App.scss";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
 const Calculator = lazy(() => import("./components/Calculator"));
 const Results = lazy(() => import("./components/Results"));
 const Info = lazy(() => import("./components/Info"));
@@ -38,10 +37,9 @@ const App = () => {
     </BrowserRouter>
   );
 };
-
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("serviceWorker.tsx");
+    navigator.serviceWorker.register("serviceWorker.js");
   });
 }
 
