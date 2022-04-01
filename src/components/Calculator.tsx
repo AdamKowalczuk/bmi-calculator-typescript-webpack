@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "../styles/calculator.scss";
-import Male from "../icons/Male.svg";
-import Female from "../icons/Female.svg";
-import MaleColored from "../icons/MaleColored.svg";
-import FemaleColored from "../icons/FemaleColored.svg";
+import Male from "../icons/Male";
+import Female from "../icons/Female";
+// import MaleColored from "../icons/MaleColored.svg";
+// import FemaleColored from "../icons/FemaleColored.svg";
 import Plus from "../icons/Plus.svg";
 import Minus from "../icons/Minus.svg";
 import Slider from "@mui/material/Slider";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useHistory } from "react-router-dom";
+
 import Nav from "./Nav";
 const Calculator = (props: any) => {
   let history = useHistory();
@@ -36,12 +37,14 @@ const Calculator = (props: any) => {
         <div className="calculator-row1-column1 convex center" onClick={() => setSex("male")}>
           {sex === "male" ? (
             <>
-              <img src={MaleColored} alt="male" />
+              {/* <img src={MaleColored} alt="male" /> */}
+              <Male fill="#58cbe0" />
               <h2 className="pink">Male</h2>
             </>
           ) : (
             <>
-              <img src={Male} alt="male" />
+              {/* <img src={Male} alt="male" /> */}
+              <Male fill="#5a6074" />
               <h2>Male</h2>
             </>
           )}
@@ -49,12 +52,14 @@ const Calculator = (props: any) => {
         <div className="calculator-row1-column2 convex center" onClick={() => setSex("female")}>
           {sex === "male" ? (
             <>
-              <img src={Female} alt="female" />
+              {/* <img src={Female} alt="female" /> */}
+              <Female fill="#5A6074" />
               <h2>Female</h2>
             </>
           ) : (
             <>
-              <img src={FemaleColored} alt="female" />
+              {/* <img src={FemaleColored} alt="female" /> */}
+              <Female fill="#58cbe0" />
               <h2 className="pink">Female</h2>
             </>
           )}

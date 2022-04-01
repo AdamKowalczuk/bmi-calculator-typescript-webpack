@@ -71,22 +71,22 @@ const Info = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              <p>
+              <p className="margin-bottom-10">
                 <b>Underweight: Less than 18.5</b>
                 <br />
                 Underweight could be a sign you're not eating enough or you may be ill. If you're underweight, a GP can help.
               </p>
-              <p>
+              <p className="margin-bottom-10">
                 <b>Normal: 18.5 to 24.9</b>
                 <br />
                 Keep up the good work! For tips on maintaining a healthy weight.
               </p>
-              <p>
+              <p className="margin-bottom-10">
                 <b>Overweight: 25 to 29.9</b>
                 <br />
                 The best way to lose weight if you're overweight is through a combination of diet and exercise.
               </p>
-              <p>
+              <p className="margin-bottom-10">
                 <b>Obese: 30 and above</b>
                 <br />
                 The best way to lose weight if you're obese is through a combination of diet and exercise, and, in some cases, medicines. See a GP for

@@ -19,6 +19,9 @@ $blue: #58cbe0;
 .MuiPaper-elevation {
   margin: 10px;
 }
+.MuiAccordionSummary-content{
+  margin-left: -8px !important;
+}
 .MuiAccordionSummary-root {
   background: #e4ebf5 !important;
   box-shadow: 3px 3px 5px #c8d0e7, -3px -3px 5px #ffffff !important;
@@ -43,15 +46,19 @@ $blue: #58cbe0;
   background-color: #e4ebf5 !important;
   padding: 20px !important;
   b {
-    color: $blue;
     font-size: 18px;
+    font-style: normal;
   }
   p {
     margin: 0 !important;
     font-weight: 400;
     color: $gray;
+    .margin-bottom-10{
+      margin-bottom: 10px !important;
+    }
   }
 }
+
 .MuiAccordion-root {
   box-shadow: 3px 3px 5px #c8d0e7, -3px -3px 5px #ffffff !important;
 }

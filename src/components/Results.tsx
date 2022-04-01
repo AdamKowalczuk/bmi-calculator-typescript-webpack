@@ -43,8 +43,8 @@ const Results = (props: any) => {
             backgroundPadding={6}
             className="circle"
             value={props.result}
-            minValue={10}
-            maxValue={50}
+            minValue={-8}
+            maxValue={52}
             text={props.result}
             strokeWidth={12}
           />

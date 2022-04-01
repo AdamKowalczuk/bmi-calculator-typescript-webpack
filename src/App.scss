@@ -1,21 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 $pink: #ee849a;
 $gray: #5a6074;
 $blue: #58cbe0;
+@font-face {
+  font-family: 'Futura';
+  src: url('./fonts/futura/futura\ medium\ bt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url('./fonts/helvetica/Helvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-size: 16px;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  // font-family: "Roboto", sans-serif;
+  font-family:"Futura";
+  // font-family: "Halvetica";
+  // font-family: "Open Sans";
   background-color: #e4ebf5;
   color: $gray;
 }
-
+*{
+  font-family:"Futura";
+}
 .App {
   margin: 0;
 }
 p {
   font-size: 16px;
+  // font-family: "Halvetica" !important;
+  font-family: "Roboto" !important;
+}
+b{
+  font-style: italic;
+  // font-family: "Halvetica";
+  font-family: "Roboto" !important;
 }
 h2 {
   font-size: 24px;
