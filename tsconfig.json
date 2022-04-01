@@ -29,7 +29,7 @@
   //   "node_modules/my_module/whitelisted_file.ts"
   // ],
   "include": [
-    "src",
+    "src", "public/serviceWorker.tsx",
     // "node_modules/whitelisted_module.ts"
 
   ],

@@ -41,10 +41,7 @@ const App = () => {
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("serviceWorker.js")
-      .then((registration) => console.log(`Service Worker registration complete, scope: '${registration.scope}'`))
-      .catch((error) => console.log(`Service Worker registration failed with error: '${error}'`));
+    navigator.serviceWorker.register("serviceWorker.js");
   });
 }
 
